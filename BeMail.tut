@@ -1,0 +1,52 @@
+Tutorial Author: William Adams (wadams@be.com)
+Name: BeMail - Written by Robert Polic
+Date: 10/14/96
+Release: DR8.1
+================================================================
+This document describes the BeMail package source code.
+This is the actual source code that supports the BeMail 
+program.  It is being released so that developers can get
+a firm grasp on how to do things in the BeOS.
+
+The free linker that comes with the BeOS has a code limitation
+size of 64K.  This application generates more code than that.
+What this means is that you cannot compile the project as it
+is using the limited linker.  It is still valuable to be able
+so see the code though, so it is still made available.
+
+INCLUDED FILES
+
+Mail.[h,cpp]
+Header.[h,cpp]
+Content.[h,cpp]
+Enclosures.[h,cpp]
+Signature.[h,cpp]
+Status.[h,cpp]
+Util.[h,cpp]
+
+GENERAL STRUCTURE OF PROGRAM
+
+CONCEPTS EXHIBITED
+
+Using Interface Kit
+Windows
+Views
+Buttons
+ScrollView
+TextView
+Message
+
+Us OS Kit
+threads
+semaphores
+
+CURRENT RELEASE
+
+The value of this present release is as a learning tool which a
+developer can use to learn about many different aspects of several
+kits in the BeOS.
+
+
+The best approach is to read through the source code and read the
+comments.  The code is pretty clean and straight forward and the comments
+should give hints as to what's going on in a clear fashion.

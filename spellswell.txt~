@@ -1,0 +1,62 @@
+Spellswell 1.0d5
+
+Mike Crawford
+Working Software, Inc.
+crawford@scruznet.com
+
+This is an early version of Spellswell for BeOS, with support for 
+the Word Services BMessage Suite.  While the user interface is 
+far from complete, and it has some bugs and unimplemented features, 
+it is nonetheless available for public downloading at:
+
+http://www.scruznet.com/~crawford/spellswell.html
+
+We have also added the Word Services Suite to BeMail so you can 
+use Spellswell with BeMail.  This special BeMail is also available 
+at this web page, and is enclosed.
+
+To use Spellswell with BeMail, place the "spwdict" dictionary, the 
+"AboutModule" and "SpellswellModule" files in the same folder with 
+Spellswell, and launch Spellswell.  The two modules are AppSketcher
+modules; ordinarily they would be merged into Spellswell but there is
+a bug that requires me to leave them as separate files.
+
+The first time Spellswell runs, it places a WordService table in 
+the BeOS file system database, with a record for Spellswell. 
+If you do a "Find" in the Browser, looking for "WordService" 
+Spellswell will be found.  Note that its "MenuString" property is 
+"Check Spelling".  
+
+Because Word Services is a public protocol, other Word Service 
+programs can register themselves by adding records to this database 
+table, and applications that have Word Services in them, as BeMail 
+does here, can automatically use these other Word Services programs 
+the same way as they use Spellswell.
+
+Now launch BeMail with Word Services.  Type some misspelled text 
+into the message body, and select Check Spelling from BeMail's 
+Services menu.  BeMail will launch Spellswell if necessary, then 
+ask Spellswell to check the message text.  Press skip or replace in 
+Spellswell as desired.
+
+This is an early version of Spellswell.  We have concentrated on 
+getting the basics working, and completing the core technology of 
+Word Services.  It is not yet a pretty program - that will come later.
+Word Services is presently based on Jon Watte's proposed scripting 
+standard; the final standard will be based on the scripting standard
+implemented in DR9.
+
+Among the things left to do is to have Spellswell tell BeMail to 
+highlight erroneous words in the original document as they are checked.  
+Then the misspellings can be seen in their context rather than in 
+Spellswell's window.
+
+Several developers have committed to supporting Word Services in 
+their applications.  It is our hope that the protocol will be widely 
+adopted, and that it will be established as the way text services 
+such as spelling and grammar checking, as well as any operations on 
+text such as encryption, are done.
+
+The draft protocol specification is available on the Web at:
+
+http://www.wordservices.org/Developers/bespec.html
